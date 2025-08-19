@@ -8,15 +8,15 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #222;
-  background-color: #f7f7f7;
+  color: #33363d;               /* Text color */
+  background-color: #c5caa5;    /* Soft beige-green background */
   text-align: center;
 }
 
 /* Header */
 header {
-  background: linear-gradient(135deg, #004080, #0073e6);
-  color: white;
+  background: #33363d;          /* Dark gray header */
+  color: #c5caa5;               /* Light text for contrast */
   padding: 2rem 1rem;
 }
 
@@ -62,33 +62,33 @@ main {
   font-size: 1rem;
   font-weight: bold;
   text-decoration: none;
-  color: white;
-  background-color: #0073e6;
+  color: #c5caa5;               /* Text on buttons */
+  background-color: #7a9133;    /* Green accent */
   transition: background 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #005bb5;
+  background-color: #5f7128;    /* Slightly darker on hover */
 }
 
 .btn.secondary {
-  background-color: #00b386;
+  background-color: #7a9133;
 }
 
 .btn.secondary:hover {
-  background-color: #008060;
+  background-color: #5f7128;
 }
 
 /* Footer */
 footer {
-  background: #222;
-  color: #ccc;
+  background: #33363d;          /* Dark gray footer */
+  color: #c5caa5;               /* Light text for contrast */
   padding: 1.5rem 1rem;
   margin-top: 2rem;
 }
 
 footer a {
-  color: #00b3ff;
+  color: #7a9133;               /* Accent links */
   text-decoration: none;
 }
 
