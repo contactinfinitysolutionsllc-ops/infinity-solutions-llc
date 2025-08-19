@@ -15,18 +15,18 @@ body {
 
 /* Header */
 header {
-  background: #33363d;          /* Dark gray header */
-  color: #c5caa5;               /* Light text for contrast */
-  padding: 2rem 1rem;
+  background: #f0f3df;          /* Lighter beige-green to make logo pop */
+  color: #33363d;               /* Dark text for contrast */
+  padding: 2.5rem 1rem;
 }
 
 .logo {
-  max-width: 150px;
+  max-width: 250px;             /* Bigger logo */
   margin-bottom: 1rem;
 }
 
 header h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 header p {
@@ -64,11 +64,12 @@ main {
   text-decoration: none;
   color: #c5caa5;               /* Text on buttons */
   background-color: #7a9133;    /* Green accent */
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .btn:hover {
-  background-color: #5f7128;    /* Slightly darker on hover */
+  background: linear-gradient(135deg, #5f7128, #7a9133);  /* Subtle gradient hover */
+  transform: translateY(-2px);                             /* Slight lift on hover */
 }
 
 .btn.secondary {
@@ -76,7 +77,8 @@ main {
 }
 
 .btn.secondary:hover {
-  background-color: #5f7128;
+  background: linear-gradient(135deg, #5f7128, #7a9133);
+  transform: translateY(-2px);
 }
 
 /* Footer */
