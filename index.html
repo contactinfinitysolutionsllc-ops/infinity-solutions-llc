@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infinity Solutions LLC</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080b12; --bg2:#0e1320; --bg3:#141928;
+  --text:#f0f2f8; --muted:#7a8099; --accent:#4f8eff; --accent2:#7eb0ff;
+  --green:#34d399; --red:#ff6b6b;
+}
+body{margin:0;font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--text);}
+header{padding:2rem;text-align:center;}
+header img.logo{height:60px;margin-bottom:1rem;}
+header h1{font-family:'Syne',sans-serif;font-weight:800;font-size:2rem;margin-bottom:.3rem;}
+header p{color:var(--muted);}
+main{padding:2rem;text-align:center;}
+.btn{padding:.8rem 2rem;margin:.5rem;border:none;border-radius:100px;background:var(--accent);color:#fff;font-weight:700;cursor:pointer;transition:.2s;text-decoration:none;display:inline-block;}
+.btn:hover{background:var(--accent2);}
+.btn.secondary{background:transparent;border:2px solid var(--accent);color:var(--accent);}
+.btn.secondary:hover{background:var(--accent2);color:#fff;}
+
+/* Modal */
+.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);align-items:center;justify-content:center;z-index:999;}
+.modal-content{background:var(--bg2);padding:2rem;border-radius:16px;max-width:600px;width:90%;position:relative;}
+.close{position:absolute;top:10px;right:20px;font-size:1.5rem;color:var(--accent);cursor:pointer;}
+iframe.form-frame{width:100%;height:600px;border:none;}
+footer{text-align:center;padding:2rem 1rem;font-size:.72rem;color:var(--muted);border-top:1px solid var(--bg3);}
+footer a{color:var(--accent2);text-decoration:none;}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="Infinity Solutions Logo" class="logo">
+  <h1>Infinity Solutions LLC</h1>
+  <p>Adapting and Solving</p>
+</header>
+
+<main>
+  <h2>Get Started</h2>
+  <p>Choose an option below to get connected with us:</p>
+  <div class="button-container">
+    <a href="#" class="btn" onclick="openModal('clientModal')">Request a Job</a>
+    <a href="#" class="btn secondary" onclick="openModal('contractorModal')">Contractor Sign-Up</a>
+  </div>
+</main>
+
+<!-- Client Modal -->
+<div id="clientModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('clientModal')">&times;</span>
+    <h3 style="margin-bottom:1rem;">Request a Job</h3>
+    <iframe src="YOUR_CLIENT_FORM_APPSCRIPT_URL" class="form-frame"></iframe>
+  </div>
+</div>
+
+<!-- Contractor Modal -->
+<div id="contractorModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('contractorModal')">&times;</span>
+    <h3 style="margin-bottom:1rem;">Contractor Sign-Up</h3>
+    <!-- Contractor Form -->
+    <iframe src="YOUR_CONTRACTOR_FORM_APPSCRIPT_URL" class="form-frame"></iframe>
+    <!-- Optional: Square Checkout -->
+    <!-- Replace with your Square checkout embed link -->
+    <!--
+    <iframe src="YOUR_SQUARE_CHECKOUT_LINK" class="form-frame" style="margin-top:1rem;"></iframe>
+    -->
+  </div>
+</div>
+
+<footer>
+  <p>📧 Email: <a href="mailto:contact.infinitysolutionsllc@gmail.com">contact.infinitysolutionsllc@gmail.com</a></p>
+  <p>📞 Phone: (802) 417-2170</p>
+  <p>📍 Rutland, VT 05701</p>
+  <p>&copy; 2025 Infinity Solutions LLC</p>
+</footer>
+
+<script>
+function openModal(id){document.getElementById(id).style.display='flex';}
+function closeModal(id){document.getElementById(id).style.display='none';}
+// Close modal when clicking outside content
+window.onclick = function(event){
+  if(event.target.classList.contains('modal')) event.target.style.display='none';
+}
+</script>
+
+</body>
+</html>
